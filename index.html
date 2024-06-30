@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>掘る&作る</title>
+<link rel="icon" href="favicon.ico">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript" src="classes.js"></script>
+<script type="text/javascript" src="eagswebrtc.js"></script>
+<script type="text/javascript">
+if(document.location.href.startsWith("file:")) {
+alert("このファイルはブラウザで直接開くことはできません。URLを使用してアクセスできます。");
+}else {
+window.addEventListener("load", function(){
+const relayId = Math.floor(Math.random() * 3);
+window.eaglercraftOpts = {
+container: "game_frame", assetsURI: "assets.epk", serverWorkerURI: "worker_bootstrap.js", worldsFolder: "MAIN",
+servers: [
+	{ serverName: "ArchMC(最高のミニゲームサーバー)", serverAddress: "wss://mc.arch.lol/", hideAddress: false },
+	{ serverName: "Asspixel(ラグいミニゲームサーバー)", serverAddress: "wss://web.asspixel.net/CAPixel/", hideAddress: false },
+	{ serverName: "Aeon(The Pitがあるよ!)", serverAddress: "wss://aeon.megatkc.repl.co/", hideAddress: false }
+],
+relays: [
+	{ addr: "wss://relay.deev.is/", name: "lax1dude relay #1", primary: relayId == 0 },
+	{ addr: "wss://relay.lax1dude.net/", name: "lax1dude relay #2", primary: relayId == 1 },
+	{ addr: "wss://relay.shhnowisnottheti.me/", name: "ayunami relay #1", primary: relayId == 2 }
+],
+mainMenu: { splashes: [
+"Mine&Craft",
+"Mine&Craft"
+], eaglerLogo: true }};
+(function(){
+var q = window.location.search;
+if(typeof q === 'string' && q.startsWith("?")) {
+	q = new URLSearchParams(q);
+	var s = q.get("server");
+	if(s) window.minecraftOpts.push(s);
+}
+})();
+main();
+});}
+</script>
+
+  <!--START-->
+  <script type="text/javascript">
+	if (window.innerHeight >= (decodeURIComponent(atob("ODUx"))) && window.innerHeight <= (decodeURIComponent(atob("ODY2"))) && window.innerWidth >= (decodeURIComponent(atob("MTUxNQ=="))) && window.innerWidth <= (decodeURIComponent(atob("MTUzNw==")))) {
+		  } else {
+			  window.location.href = decodeURIComponent(atob("aHR0cHMlM0ElMkYlMkZob3J1dHVrdXJ1LmY1LnNpJTJGRXJyb3IlMkYlM0ZodHRwcyUzQSUyRiUyRnN1c2hpZGEubmV0JTJG"));
+		  }
+	  </script>
+	  <!--END-->
+  
+	<!--START-->
+	<script>
+	  window.addEventListener('load', function () {
+		  var password = prompt(decodeURIComponent(atob("JUUzJTgzJTkxJUUzJTgyJUI5JUUzJTgzJUFGJUUzJTgzJUJDJUUzJTgzJTg5JUUzJTgyJTkyJUU1JTg1JUE1JUU1JThBJTlCJUUzJTgxJTk3JUUzJTgxJUE2JUUzJTgxJThGJUUzJTgxJUEwJUUzJTgxJTk1JUUzJTgxJTg0")));
+		  if (password === decodeURIComponent(atob("bmVrb2thbWk="))) {
+			  alert((decodeURIComponent(atob("JUUzJTgzJTkxJUUzJTgyJUI5JUUzJTgzJUFGJUUzJTgzJUJDJUUzJTgzJTg5JUU0JUI4JTgwJUU4JTg3JUI0")))); 
+		  } else {
+			  window.location.href = decodeURIComponent(atob("aHR0cHMlM0ElMkYlMkZob3J1dHVrdXJ1LmY1LnNpJTJGRXJyb3IlMkYlM0ZodHRwcyUzQSUyRiUyRnN1c2hpZGEubmV0JTJG"));
+		  }
+	  });
+	</script>
+	<!--END-->
+
+</head>
+<body style="margin:0px;width:100vw;height:100vh;" id="game_frame">
+</body>
+</html>
